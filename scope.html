@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>scope</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	let counter = 0 //global scope
+
+	function hitme(){ //global scope
+		//local scope
+		counter++
+	}
+
+	function other(){
+		//local scope
+	}
+
+	hitme()
+	hitme()
+
+	console.info(counter)
+
+	function first(){
+		//local scope
+		let firstVariable = "first"
+
+			function firstNested(){
+				console.info(firstVariable)
+			}
+		firstNested()
+	}
+
+	function second(){ 
+		//local scope
+		let secondVariable = "second"
+	}
+
+	//first()
+	//second()
+
+	//global scope mencoba akses local scope
+	//console.info(firstVariable)
+	//console.info(secondVariable)
+
+</script>
+</body>
+</html>

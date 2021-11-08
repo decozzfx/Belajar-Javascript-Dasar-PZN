@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>destructuring array</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	{
+		const names = ["decoz","zfx","khannedy","budi","joko"]
+	
+		const [firstName, middleName, lastName, ...others] = names
+	
+		console.info(firstName)
+		console.info(middleName)
+		console.info(lastName)
+		console.info(others)
+	}
+
+	{
+		const person = {
+			firstName : "decoz",
+			lastName : "zfx",
+			address : {
+				street : "belum ada",
+				city : "magetan",
+				country : "indonesia"
+			},
+			hobby : "game",
+			channel : "PZN"
+		}
+
+		const{firstName, lastName, address: {street,city,country}, ...others} = person
+
+		console.info(firstName)
+		console.info(lastName)
+		console.info(street)
+		console.info(city)
+		console.info(country)
+		console.info(others)
+	}
+
+	//destructuring parameter object
+	{
+	function displayPerson({firstName, middleName, lastName}){
+		console.info(firstName)
+		console.info(middleName)
+		console.info(lastName)
+	}
+
+	const person = {
+		firstName : "decoz",
+		middleName : "zfx",
+		lastName : "dcz"
+	}
+
+	displayPerson(person)
+	}
+
+	//destruction parameter array
+	{
+		function sum ([first, last]){
+			return first + last
+		}
+
+		console.info(sum([10,10]))
+		console.info(sum([20,20]))
+	}
+
+			//destruction array default value
+	{
+		const names = ["decoz","zfx"]
+		const [firstName, middleName, lastName = "dcz"] = names 
+
+		console.info(firstName)
+		console.info(middleName)
+		console.info(lastName)
+	}
+
+	{
+		const names = {
+			firstName : "decoz",
+			middleName : "zfx",
+			lastName : "khannedy"}
+	
+		const {firstName:namaDepan, middleName:namaBelakang, lastName:namaTerakhir="dcz"} = names
+	
+		console.info(namaDepan)
+		console.info(namaBelakang)
+		console.info(namaTerakhir)
+	}
+
+</script>
+</body>
+</html>

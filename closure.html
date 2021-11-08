@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>closure</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	function createAdder(value){
+		const owner = "decoz"
+
+		function adder(param){
+			console.info(owner)
+			return param + value
+		}
+		return adder
+	}
+
+	const addTwo = createAdder(2)
+	//function addTwo(param){
+	//	console.info("decoz")
+	//	return 2 + param
+	//}
+	console.info(addTwo(10))
+	console.info(addTwo(20))
+
+</script>
+</body>
+</html>

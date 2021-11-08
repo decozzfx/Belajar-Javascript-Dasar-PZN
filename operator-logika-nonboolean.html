@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>operator logika non boolean</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// "||" or   truthy kiri
+		// "&&" and  falsy kanan
+		
+		console.info("hello" || "") // hello
+		console.info("" || []) // []
+		console.info("0" || "Nol") // "0"
+		console.info(0 || "Nol") // "nol"
+		console.info(null || "Null") //"null"
+		console.info(undefined || "undefined") // undefined
+		console.info(0 || false) //false
+
+		const person = {
+			firstName : "decoz",
+			lastName  : "zfx"
+		}
+
+		const name = person.firstName || person.lastName
+
+		console.info(name)
+
+		console.info("hello" && ``) // ``
+		console.info("" && []) // ""
+		console.info("0" && "nol") // nol
+		console.info(null && "NULL") // null
+		console.info(undefined && "UNDEFINED") // undefined
+		console.info("underfined" && "null") // "null"
+
+
+
+
+	</script>
+
+</body>
+</html>

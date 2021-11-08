@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>operator in operator</title>
+    </head>
+
+    <body> 
+    <script>
+
+        const person = {
+            firstName : "decoz",
+            lastName : "zfx"
+        }
+
+        if ("firstName" in person){
+            alert(`hello ${person.firstName}`)
+        }else{
+            alert(`tidak ada`)
+        }
+
+        const names = [null, "decoz", null]
+        const result = 0 in names 
+        document.writeln(`<p>${result}</p>`)
+
+    </script>
+    </body>
+</html>

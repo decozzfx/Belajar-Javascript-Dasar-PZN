@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>function</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function sayHelloWorld(){
+			document.writeln(`<p>Hello World</p>`)
+		}
+
+		sayHelloWorld()
+
+
+		// function menjadi value
+
+		function sayHello(name){
+			document.writeln(`<p>Hello ${name}<p/>`)
+		}
+
+		const say = sayHello  
+
+		say("budi")
+
+
+		//function parameter
+		function giveName(callback){
+			callback("budi")  //sayHello("budi")
+		}
+
+		giveName(sayHello)
+		giveName(say)
+
+		//anonymous function (function tanpa nama function)
+		let sayy = function(nama){
+			document.writeln(`Hello ${nama}`)
+		}
+
+		sayy("Rudi")
+
+
+	</script>
+</body>
+</html>

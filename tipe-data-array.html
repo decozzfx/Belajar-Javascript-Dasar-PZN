@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>tipe data array</title>
+    </head>
+
+    <body>
+    <script>
+
+        let arrayKosong = [] 
+        let arrayNama = ["decoz","zfx","zoced"]
+
+        const names = []
+
+        names.push("decoz")
+        names.push("zfx","zoced")
+
+        console.table(names) 
+
+        console.info(names[0])
+        console.info(names[1])
+
+        names[0] = "james"
+
+        console.table(names)
+
+        delete names[2]
+
+        names.push("dcz")
+
+        console.table(names)
+
+
+        names[2] = "ada lagi"
+
+        console.table(names)
+
+        console.table(names.length)
+
+
+
+
+    </script>
+    </body>
+</html>

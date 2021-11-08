@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>kata kunci this di object</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	console.info(this)
+
+	const person = {
+		name : "decoz",
+		sayHello : function (name){
+			console.info(`hello ${name}, my name is ${this.name}`) // this ini mengakses name di object karena menggunakan function
+		}
+	}
+
+	person.sayHello("budi")
+	person.sayHello("joko")
+
+	const orang = {
+		name : "decoz",
+		sayHi : (name) => {
+			console.info(this) // this ini mengakses name di window , karena menggunakan arrow
+			console.info(`hello ${name}`)
+		}
+	}
+	orang.sayHi("bud")
+
+</script>
+</body>
+</html>
